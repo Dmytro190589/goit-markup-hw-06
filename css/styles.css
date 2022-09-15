@@ -259,6 +259,9 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 40px;
+        margin-left: auto;
+        margin-right: auto;
     transform: translate(-50%, -50%);
     min-height: 581px;
     min-width: 528px;
@@ -288,6 +291,38 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 }
+textarea{
+    resize: none;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+    padding: 0;
+}
+.form label{
+    margin-bottom: 4px;
+}
+.form input{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+}
+.form-policy input[type='checkbox']{
+
+}
+.comment {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    color:rgba(33, 33, 33, 1);
+    font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+}
+
 .photos {
     position: relative;
 }
