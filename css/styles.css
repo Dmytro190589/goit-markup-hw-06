@@ -269,7 +269,7 @@ img {
     background-color: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    z-index: 10;
+    z-index: 55;
 }
 .btn-end {
     position: relative;
@@ -569,7 +569,21 @@ textarea{
 .adress-list {
     display: block;
 }
-
+.form-mails{
+    position: relative;}
+.form-mails label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+.form-mails input{
+    background-color: var(--accent-color);
+    border-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+}
 /*==================== Portfolio ====================*/
 
 header {
