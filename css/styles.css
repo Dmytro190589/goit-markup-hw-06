@@ -594,15 +594,20 @@ li.foto:hover{
     border: 1px solid #eeeeee;
     border-top: none;
 }
-.fon {
-        position: relative;
+.fon {      
+position: relative;
+overflow: hidden;
+      
+}
+.resurse:hover,
+.resurse:focus{
+    transform: translateY(100%);
 }
 .resurse{
     position: absolute;
     display: flex;
-align-items: center;
-justify-content: center;
-opacity: 0;
+    align-items: center;
+    justify-content: center;
     padding: 24px 63px;
     top: 0;
     left: 0;
@@ -611,6 +616,10 @@ opacity: 0;
     line-height: 1.55;
     color: #fff;
     background-color:rgba(33, 150, 243, 0.9);
+
+    transition-property: transform;
+    transition-duration: var(--transituin-duration);
+    transition-timing-function: var(--timing-function);
 }
 .projects-description {
     font-family: var(--primary-font);
