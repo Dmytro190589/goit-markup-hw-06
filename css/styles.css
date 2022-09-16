@@ -242,8 +242,7 @@ input{
     transition-timing-function: var(--timing-function);
     transition-duration: var(--transituin-duration);
 }
-    
-    /* Modal winwod */
+/* Modal winwod */
 .backdrop {
     position: fixed;
     top: 0;
@@ -253,15 +252,21 @@ input{
     background-color: rgba(47, 48, 58, 0.4);
     visibility: visible;
     opacity: 1;
+    
     transition-property: opacity;
     transition-timing-function: var(--timing-function);
     transition-duration: var(--transituin-duration);
+}
+.backdrop:hover,
+.backdrop:focus{
+    
 }
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
 }
+
 .modal {
     position: absolute;
     top: 50%;
@@ -278,6 +283,7 @@ input{
     transition-duration: var(--transituin-duration);
     transition-timing-function: var(--timing-function);
 }
+
 .btn-end {
     position: relative;
     width: 17px;
@@ -293,9 +299,189 @@ input{
     height: 30px;
     top: 8px;
     right: 8px;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    transition: border-color, fill;
+    transition-timing-function: var(--timing-function);
+    transition-duration: var(--transituin-duration);
+}
+.modal-btn:hover{
+    border-color: var(--btn--color);
+    fill: var(--btn--color);
+}
+
+.modal-container {
+    margin: 40px;
+}
+
+.modal-title {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    margin-bottom: 12px;
+
+    color: #212121;
+}
+
+.modal-form-info {
+    margin-bottom: 20px;
+}
+
+.modal-form-label {
+    position: relative;
+    font-size: 12px;
+    line-height: 1.16;
+    text-align: left;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+    color: rgba(117, 117, 117, 1);
+}
+
+.modal-form-input {
+    height: 40px;
+    padding: 11px 42px;
+    outline: #fff transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color;
+    transition-timing-function: var(--timing-function);
+    transition-duration: var(--transituin-duration);
+}
+.modal-form-input:focus{
+    border-color: var(--btn--color);
+}
+
+
+.form-input-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    bottom: 11px;
+    fill: rgba(33, 33, 33, 1);
+    transition-property: fill;
+    transition-timing-function: var(--timing-function);
+    transition-duration: var(--transituin-duration);
+}
+.modal-form-input:focus~.form-input-icon {
+    fill:var(--btn--color)
+}
+.form-label-condition-check {
+    width: 16px;
+    height: 15px;
+}
+
+.form-input-condition {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;;
+}
+
+.form-input-comment {
+    height: 120px;
+    width: 100%;
+    resize: none;
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    
+    color: rgba(117, 117, 117, 0.5);
+    outline: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition-property: border-color;
+    transition-duration: var(--transituin-duration);
+   transition-timing-function: var(--timing-function);
+}
+.form-input-comment:focus{
+    border-color: var(--btn--color);
+}
+.form-input-comment::placeholder{
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    
+     color: rgba(117, 117, 117, 0.5);
+}
+
+.form-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-label-condition {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(117, 117, 117, 1);
+}
+
+.label-icon-condition {
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    background-color: transparent;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 2px;
+    transition: background-color var(--timing-function) var(--transituin-duration);
+}
+
+.condition {
+    margin-left: 4px;
+    text-decoration: underline;
+    color: rgba(33, 150, 243, 1);
+}
+
+.form-label-condition-check {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+}
+ .form-label-condition-check:checked + .label-icon-condition .icon-unchek{
+opacity: 0;
+}
+.icon-chek{
+opacity: 0;
+}
+.form-label-condition-check:checked + .label-icon-condition .icon-chek {
+opacity: 1;
+}
+
+
+.modal-form-btn {
+    border-color: transparent;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn {
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    background-color: #2196f3;
+    min-height: 50px;
+    padding: 10px 52px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: #fff;
+    cursor: pointer;
+    border: none;
 }
 
 
@@ -660,13 +846,13 @@ li.foto:hover{
 .footer-social .footer-item + .footer-item {
     margin-left: 10px;
 }
+.footer-link-socail:hover,
+.footer-link-socail:focus{
+    background-color: #2196f3;
+}
 
 .footer-socail-icon {
     fill: var(--primary-text-white);
-}
-.footer-link-socail:hover,
-.footer-link-socail:focus {
-    background-color: var(--primary-text-blue);
 }
 /* subscribe footer */
 .input-subscribe-mail {
@@ -683,8 +869,11 @@ li.foto:hover{
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
+    transition-property: border-color var(--transituin-duration) var(--timing-function);
 }
-
+.input-subscribe-mail:focus{
+    border-color: var(--btn--color);
+}
 .subscribe-btn {
     position: relative;
     padding: 10px 0 10px 28px;
@@ -705,18 +894,22 @@ li.foto:hover{
     text-align: center;
     letter-spacing: 0.06em;
     border: none;
+    transition: background-color var(--timing-function) var(--transituin-duration);
 }
-.icon-subscribe{
+.subscribe-btn:hover{
+background-color: var(--primary-text-blue);
+}
+.icon-subscribe {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 14px;
+    right: 28px;
+    width: 24px;
+    height: 24px;
     fill: white;
 }
-
-.subcribe-label {
-    display: flex;
-    gap: 12px;
-}
 .subscribe{
-    margin-left: auto;
+        margin-left: auto;
+}
+.form-subscribe{
+    display: flex;
 }
