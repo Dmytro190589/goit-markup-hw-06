@@ -190,7 +190,7 @@ input{
 }
 .btn-main:hover,
 .btn-main:active {
-    background: var(--primary-text-blue);
+    background-color: var(--primary-text-blue);
     box-shadow: 0px 4px 4px var(--accent-color-box-background);
     border-radius: 4px;
 }
@@ -257,10 +257,7 @@ input{
     transition-timing-function: var(--timing-function);
     transition-duration: var(--transituin-duration);
 }
-.backdrop:hover,
-.backdrop:focus{
-    
-}
+
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -658,7 +655,7 @@ opacity: 1;
 .footer {
     padding-top: 65px;
     padding-bottom: 60px;
-    background: var(--accent-color);
+    background-color: var(--accent-color);
 }
 
 .footer-content {
